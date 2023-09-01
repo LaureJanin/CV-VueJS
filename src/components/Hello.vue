@@ -1,4 +1,5 @@
 <script setup>
+    import { RouterLink } from 'vue-router'
     import Button from './Button.vue'
 </script>
 
@@ -9,8 +10,12 @@
             <p class="work">Web Designer/Developper</p>
             <p class="content">I specialize in UI Design, Responsive Web Design and Web development</p>
             <div class="buttons">
-                <Button background="ffffff" color="000000">Contact</Button>
-                <Button background="6a9d89" color="ffffff">Projects</Button>
+                <router-link to="/contact">
+                    <Button background="ffffff" color="000000">Contact</Button>
+                </router-link>
+                <router-link to="/projects">
+                    <Button background="6a9d89" color="ffffff">Projects</Button>
+                </router-link>
             </div>
         </div>
         <img src="../assets/illustration.png" alt="illustration" class="img" />
@@ -41,6 +46,10 @@
 }
 #hello .img {
     width: 80%;
+}
+
+a {
+    text-decoration: none;
 }
 
 @media screen and (min-width: 780px) {
